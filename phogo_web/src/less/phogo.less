@@ -1,0 +1,210 @@
+.navbar .container-fluid>.navbar-header {
+    float: left;
+    // margin-right: 10px;
+}
+
+.navbar .navbar-nav {
+    float: left;
+    // margin: 5px;
+}
+
+.navbar-header.navbar-right {
+    float: left;
+    display: block;
+}
+
+
+/* img as Watermark */
+
+img.watermark {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    height: 60%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Collapsible Panels */
+
+.clickable {
+    cursor: pointer;
+}
+
+
+/* Outlined buttons */
+
+.btn-outline {
+    color: inherit;
+    background-color: transparent;
+    transition: all .5s;
+}
+
+.btn-primary.btn-outline {
+    color: #428bca;
+}
+
+.btn-success.btn-outline {
+    color: #5cb85c;
+}
+
+.btn-info.btn-outline {
+    color: #5bc0de;
+}
+
+.btn-warning.btn-outline {
+    color: #f0ad4e;
+}
+
+.btn-danger.btn-outline {
+    color: #d9534f;
+}
+
+.btn-primary.btn-outline:hover, .btn-success.btn-outline:hover, .btn-info.btn-outline:hover, .btn-warning.btn-outline:hover, .btn-danger.btn-outline:hover {
+    color: white;
+}
+
+/* File Options Menu */
+.dropdown-menu>li>.style-as-a:focus, .dropdown-menu>li>.style-as-a:hover {
+    color: #262626;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+.dropdown-menu>li>.style-as-a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+.style-as-a:focus, .style-as-a:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+.style-as-a:active, .style-as-a:hover {
+    outline: 0;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+label input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+/* Panel buttons */
+
+.btn-toolbar-justified {
+    display: flex;
+    justify-content: space-between;
+    .btn:not(last-child) {
+        width: 100%;
+        margin-right: 5px;
+    }
+    .btn:last-child {
+        margin-right: 0px;
+    }
+}
+
+// Glyphicons font sizes
+.glyphicon-small {
+    font-size: 80%;
+}
+
+.glyphicon-smaller {
+    font-size: 60%;
+}
+
+// Theme selector
+.theme-selector {
+    padding: 5px;
+    text-align: center;
+    .btn {
+        &:first-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        &:last-child {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+}
+
+.ace_editor, .terminal {
+    height: 400px;
+}
+
+#editor-container {
+    padding: 10px;
+    .col-lg-* {
+        padding: 30px;
+    }
+    .col-md-* {
+        padding: 20px;
+    }
+}
+
+
+/*.panel #editor-panel {
+  margin-top: 20px;
+  }*/
+
+
+/* Modal (background) */
+
+.modal {
+    position: fixed;
+    /* Stay in place */
+    display: none;
+    /* Hidden by default */
+    z-index: 1050;
+    /* Sit on top */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Black w/ opacity */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    /**/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /**/
+    margin: auto;
+    text-align: center;
+    /*align-self: center;*/
+    padding: 20px;
+    padding-bottom: 10px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    /* Could be more or less, depending on screen size */
+}
