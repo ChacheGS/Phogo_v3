@@ -1,9 +1,0 @@
-node_modules
-bower_components
-dev
-dev/**/*
-**/*/__pycache__
-*.py[co]
-
-.nvmrc
-.python-version
