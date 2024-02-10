@@ -6,45 +6,32 @@
 
 <div
 	class="
-    container
-    flex
-    sm:flex-col
-    max-w-full
-    max-h-full
-    rounded-md
-"
+    	rounded-md
+	"
 >
-	<div class="text-black">
-		<div class="panel-heading">
-			<h3 class="panel-title">
-				{title}
-				<span class="pull-right clickable visible-md visible-sm visible-xs">
-					<i class="glyphicon glyphicon-chevron-up glyphicon-smaller"> </i>
-				</span>
-			</h3>
-		</div>
-		<div class="panel-body">
-			<slot name="content" />
-		</div>
-		{#if $$slots.bottom}
-			<div class="panel-footer">
-				<slot name="bottom" />
+	<section class="text-gray-600 body-font">
+		<div class="">
+			<div class="flex-col justify-center">
+				<div class="flex-grow text-center">
+					<h2 class="title-font text-2xl font-medium text-gray-900">
+						{title}
+					</h2>
+				</div>
+				<div class="rounded-lg overflow-hidden">
+					<slot name="content" />
+				</div>
+				<div class="flex-grow">
+					{#if $$slots.bottom}
+						<slot name="bottom" />
+					{/if}
+				</div>
 			</div>
-		{/if}
-	</div>
+		</div>
+	</section>
 </div>
 
 <style lang="postcss">
-	.panel {
-		@apply bg-white shadow-md;
-	}
-	.panel-heading {
-		@apply bg-primary-500 text-white;
-	}
-	.panel-body {
-		@apply p-4;
-	}
-	.panel-footer {
-		@apply bg-primary-500 text-white p-4;
+	* {
+		outline: 1px solid green;
 	}
 </style>

@@ -4,60 +4,88 @@
 	import Panel from '$lib/components/Panel.svelte';
 	import Editor from '$lib/components/Editor.svelte';
 	import Terminal from '$lib/components/Terminal.svelte';
+	import Button from '$lib/components/Button.svelte';
 </script>
 
 <div
 	class="
-	rounded-xl
-	bg-white
-	flex
+	grid
+	grid-cols-2
+	grid-flow-col
 	space-x-4
+	min-w-[60rem]
+	mx-4
+	overflow-hidden
 	"
 >
-	<Panel title="Panel 1">
-		<svelte:fragment slot="content">
-			<div>
-				<Editor theme="monokai" language="python" code="print('Hello, World!')" />
-			</div>
-		</svelte:fragment>
-		<svelte:fragment slot="bottom">
-			<div class="flex justify-center">
+	<div
+		class="
+		container
+		bg-white
+	"
+	>
+		<Panel title="Panel 1">
+			<svelte:fragment slot="content">
+				<div
+					class="
+					panel-content
+				"
+				>
+					<Editor theme="monokai" language="python" code="print('Hello, World!')" />
+				</div>
+			</svelte:fragment>
+			<svelte:fragment slot="bottom">
 				<button
 					class="
-						btn
-						btn-primary
-					"
+						flex
+						mx-auto
+						mt-6
+						text-white
+						bg-green-500
+						border-0
+						py-2
+						px-5
+						focus:outline-none
+						hover:bg-green-600
+						rounded
+						"
 				>
-					Primary</button
-				>
-			</div>
-		</svelte:fragment>
-	</Panel>
-
-	<Panel title="Panel 2">
-		<svelte:fragment slot="content">
-			<Terminal
-				commands={{
-					help: (...args) => 'This is a help message'
-				}}
-			/>
-		</svelte:fragment>
-		<svelte:fragment slot="bottom">
-			<div class="flex justify-center">
-				<button
+					Button
+				</button>
+			</svelte:fragment>
+		</Panel>
+	</div>
+	<div
+		class="
+		container
+		bg-white
+		"
+	>
+		<Panel title="Panel 2">
+			<svelte:fragment slot="content">
+				<div
 					class="
-						btn
-						btn-secondary
-					"
+				panel-content
+				"
 				>
-					Secondary</button
-				>
-			</div>
-		</svelte:fragment>
-	</Panel>
+					<Terminal
+						commands={{
+							help: (...args) => 'This is a help message'
+						}}
+					/>
+				</div>
+			</svelte:fragment>
+			<svelte:fragment slot="bottom">
+				<Button variant="outline" color="blue">Blue outlined</Button>
+			</svelte:fragment>
+		</Panel>
+	</div>
 </div>
 
 <style lang="postcss">
+	* {
+		outline: 1px solid red;
+	}
 	figure {
 		/*! purgecss ignore current */
 		@apply flex relative flex-col;
